@@ -5,8 +5,7 @@
 \inputencoding{utf8} % Кодировка вашего файла
 
 % Библиотека позволющая выводит используемую литературу. Взяли из Путь в науку, однако тут не так легко (не)работает
-\usepackage{biblatex}
-\usepackage{csquotes}
+
 
 \usepackage{paratype} % Шрифты (можно отключить, если дает ошибку)
 %% Немного увеличим шрифт в математическом режиме, чтобы соответствовать размерам Paratype-шрифтов
@@ -52,7 +51,7 @@
 \renewcommand{\emptyset}{\varnothing}
 \renewcommand{\epsilon}{\varepsilon}
 
-\addbibresource{bibliography.bib}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 % Конец преамбулы
 %%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -362,9 +361,9 @@ M = \begin{pmatrix}
 \chapternonum{Заключение}
 
 % В заключении подводятся итоги выполненной работы, рассказывается о~том, что удалось и~что не~удалось сделать, описываются перспективы продолжения исследований.
-
-\printbibliography[heading=bibintoc]
-
+\renewcommand\bibname{Список литературы}
+\bibliographystyle{ugost2003}
+\bibliography{bibliography}
 
 % Приложения
 \appendix

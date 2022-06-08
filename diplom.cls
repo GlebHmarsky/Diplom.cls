@@ -11,8 +11,6 @@
 % Загружаем report.cls со всеми опциями, переданными в diplom
 \LoadClassWithOptions{report} 
 
-\RequirePackage[backend=biber,style=gost-numeric,language=auto,autolang=other,sorting=none,movenames=false]{biblatex}
-
 \nocite{*}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Подключаем основные пакеты

@@ -4,8 +4,6 @@
 % \usepackage[utf8]{inputenc}
 \inputencoding{utf8} % Кодировка вашего файла
 
-% Библиотека позволющая выводит используемую литературу. Взяли из Путь в науку, однако тут не так легко (не)работает
-\usepackage{biblatex}
 
 \usepackage{paratype} % Шрифты (можно отключить, если дает ошибку)
 %% Немного увеличим шрифт в математическом режиме, чтобы соответствовать размерам Paratype-шрифтов
@@ -50,6 +48,7 @@
 \renewcommand{\geq}{\geqslant}
 \renewcommand{\emptyset}{\varnothing}
 \renewcommand{\epsilon}{\varepsilon}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 % Конец преамбулы
@@ -360,73 +359,9 @@ M = \begin{pmatrix}
 \chapternonum{Заключение}
 
 % В заключении подводятся итоги выполненной работы, рассказывается о~том, что удалось и~что не~удалось сделать, описываются перспективы продолжения исследований.
-
-% \printbibliography
-% Если нужно, меняем название Литература
-\renewcommand{\bibname}{Список литературы} 
-\begin{thebibliography}{9}
-% Если нужно сделать N. вместо [N] 
-% \makeatletter\renewcommand{\@biblabel}[1]{#1.}\makeatother
-
-
-% Wald I.[et al.]. State of the Art in Ray Tracing Animated Scenes // ComputerGraphics Forum. 2009. Vol. 28, no. 6. P. 1691–1722. DOI:10.1111/j.1467-8659.2008.01313.x.
-
-\bibitem{TeX:YarSU}
-	TeX в ЯрГУ [Электронный ресурс].
-	URL: \url{http://www.tex.uniyar.ac.ru}
-	(дата доступа: 20.05.2017).
-
-\bibitem{Oetiker:2016}
-	Oetiker~T., Partl~H., Hyna~I., Schlegl~E. 
-	The Not So Short Introduction to {\LaTeXe} [Электронный ресурс].
-	URL: \url{https://tobi.oetiker.ch/lshort/lshort.pdf}
-	(дата доступа: 01.06.2017).
-
-
-\bibitem{Kotelnikov:2004}
-	Котельников~И.\,А., Чеботаев~П.\,З.
-	\LaTeXe{} по"~русски. 3-е изд., перераб. и~доп.
-	Новосибирск\,: Сибирский хронограф, 2004. 496~с.
-
-\bibitem{tikz}
-	Tantau~T.
-	PGF~--- Create PostScript and PDF graphics in {\TeX} [Электронный ресурс].
-	URL: \url{https://www.ctan.org/pkg/pgf}
-	(дата доступа: 17.05.2017).
-
-\bibitem{Kirutenko:2014}
-	Кирютенко~Ю.\,А.
-	TikZ \& PGF. Создание графики в \LaTeXe-документах. Ростов-на-Дону, 2014. 277~c.
-	URL: \url{https://open-edu.sfedu.ru/files/pgf-ru-all-method.pdf}
-
-%\bibitem{TikzEdt}
-%	TikzEdt. A semigraphical TikZ editor. [Электронный ресурс]. 2013. URL: \url{http://www.tikzedt.org/
-
-\bibitem{Cook:1971}
-	\selectlanguage{english}
-	Cook~S.\,A. 
-	The complexity of theorem-proving procedures
-	//~Proceedings of the third annual ACM symposium on Theory of computing. 
-	ACM, 1971. P.~151--158.
-	\selectlanguage{russian}
-
-\bibitem{Pupyrev:2010}
-	Пупырев~С.\,Н., Тихонов~А.\,В.
-	Визуализация динамических графов для анализа сложных сетей
-	//~Модел. и анализ информ. систем. 
-	2010. Т.~17, №~1. С.~117--135.
-
-\bibitem{Kuzmin:2000}
-	Кузьмин~И.\,Г. 
-	Некоторые проблемы государственных финансов в современной России
-	//~Российские предприятия в системе рыночных отношений\,: материалы научно"=практич. конф. Ярославль, 17--18~окт. 2000~г. /~отв.~ред. Л.Б.~Парфенова.  Ярославль, 2000.  С.~86--90.
-	
-\bibitem{GOST-2001}
-	ГОСТ Р~517721-2001.
-	Аппаратура радиоэлектронная бытовая. Входные и выходные параметры и типы соединений. Технические требования.  Введ. 2002-01-01. М.\,: Изд"~во стандартов, 2001. IV, 27~с.
-	
-\end{thebibliography}
-
+\renewcommand\bibname{Список литературы}
+\bibliographystyle{ugost2003}
+\bibliography{bibliography}
 
 % Приложения
 \appendix
